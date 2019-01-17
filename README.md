@@ -46,7 +46,6 @@ The checkpoints are saved in ./checkpoint folder. Denoised validation images are
 ```
 tensorboard --logdir=./logs
 ```
-[here](http://mmcheng.net/msra10k/)
 ## Testing using the trained network
 ### testing dataset
 - Download DUT-OMRON dataset from [here](http://saliencydetection.net/dut-omron/#outline-container-org13291b3)
