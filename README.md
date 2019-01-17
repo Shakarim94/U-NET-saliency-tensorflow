@@ -47,16 +47,17 @@ The checkpoints are saved in ./checkpoint folder. Denoised validation images are
 tensorboard --logdir=./logs
 ```
 ## Testing using the trained network
-### testing dataset
+### testing dataset (DUT-OMRON)
 - Download DUT-OMRON dataset from [here](http://saliencydetection.net/dut-omron/#outline-container-org13291b3)
 - Unzip their folders and make sure images and saliency maps are all in one folder (you can call this folder ‘DUT-OMRON’).
 - Put this folder into data/
 
+### testing dataset (ECSSD)
 - Download ECSSD dataset from [here](http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/dataset.html)
 - Unzip their folder and make sure images and saliency maps are all in one folder (you can call this folder ‘ECSSD’).
 - Put this folder into data/
 
-
+### checkpoints
 - Download checkpoints from [here](https://drive.google.com/drive/folders/1kVGuOvgozg3AC-xN5-DHAo3fy2FdsoQZ?usp=sharing)
 - Put them in checkpoints/ folder. You don’t need to download all of them.
 
@@ -64,7 +65,7 @@ Now you can test using (e.g. ECCSD dataset):
 ```
 python2 main_UNET_plus.py —-phase test —-test_set ./data/ECSSD —-aug_scale 2
 ```
-- aug_scale decides which one of the checkpoints you choose.
+aug_scale decides which one of the checkpoints you choose.
 Denoised images are saved in ./test folder.
 
 
