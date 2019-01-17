@@ -254,10 +254,9 @@ class saliency(object):
             full_path = tf.train.latest_checkpoint(checkpoint_dir)
             global_step = int(full_path.split('/')[-1].split('-')[-1])
             self.saver.restore(self.sess, full_path)
-            return (
-             True, global_step)
-        return (
-         False, 0)
+            return (True, global_step)
+		else:
+        	return (False, 0)
 	
 	#testing function that will output average MAE and F-score and saves predicted saliency maps
     def test(self, test_imgs, test_maps, save_dir):
